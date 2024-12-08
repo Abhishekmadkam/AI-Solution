@@ -1,0 +1,570 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-columns: 250px 2fr;
+    grid-template-rows: auto 50px;
+    min-height: 100vh;
+  }
+  
+  .navigation {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .navigation ul li {
+    margin-bottom: 15px;
+  }
+  
+  .navigation ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navigation ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer {
+    background: #34495e;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer .social a {
+    color: white;
+    margin: 0 5px;
+    font-size: 1.5rem;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, #1abc9c, #16a085);
+    color: white;
+    padding: 50px;
+  }
+  
+  .hero h1 span {
+    color: #f39c12;
+  }
+  
+  .about-section, .services-section, .contact-section {
+    background: #ecf0f1;
+    text-align: center;
+  }
+  
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  /* Footer AI Animation */
+.ai-animation {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .circle {
+    background: #16a085;
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(22, 160, 133, 0.8), 0 0 30px rgba(22, 160, 133, 0.5);
+    animation: pulse 2s infinite;
+  }
+  
+  .circle i {
+    font-size: 3rem;
+  }
+  
+  .waves {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .wave {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 3px solid #16a085;
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: wave-animation 2.5s infinite;
+  }
+  
+  .wave:nth-child(2) {
+    animation-delay: 0.5s;
+    width: 180px;
+    height: 180px;
+  }
+  
+  .wave:nth-child(3) {
+    animation-delay: 1s;
+    width: 210px;
+    height: 210px;
+  }
+  
+  /* Keyframes for the animation */
+  @keyframes wave-animation {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(22, 160, 133, 0.8), 0 0 30px rgba(22, 160, 133, 0.5);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(22, 160, 133, 1), 0 0 40px rgba(22, 160, 133, 0.7);
+    }
+  }
+  #home{
+    text-align: left;
+  }
+
+  /* Make the header cover the full page */
+.header {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    background-color: #f4f4f4; /* Light background color */
+    text-align: center;
+    padding: 20px; /* Add some padding around the content */
+  }
+  
+  .header h1 {
+    font-size: 3rem; /* Large font size for the title */
+    margin-bottom: 20px; /* Space below the title */
+  }
+  
+  .additional-content {
+    max-width: 800px; /* Limit width for better readability */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  }
+  
+  .additional-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .additional-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .additional-content ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .additional-content p {
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+  
+  h3 {
+    font-size: 1.6rem;
+    margin-top: 25px;
+  }
+  
+  /* Robot container */
+.robot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 100vh; /* Full screen height */
+  }
+  
+  /* Robot styling */
+  .robot {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 2s ease-in-out infinite; /* Bouncing animation for robot */
+  }
+  
+  /* Robot head */
+  .robot-head {
+    background-color: #34495e;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: head-bob 1s ease-in-out infinite; /* Head bobbing animation */
+  }
+  
+  /* Robot eyes */
+  .robot-eyes {
+    position: absolute;
+    top: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+  }
+  
+  .left-eye, .right-eye {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: eye-move 1s infinite alternate;
+  }
+  
+  .left-eye {
+    animation-delay: 0.5s;
+  }
+  
+  /* Robot body */
+  .robot-body {
+    width: 60px;
+    height: 70px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Robot arms */
+  .robot-arm {
+    position: absolute;
+    top: 40px;
+    width: 15px;
+    height: 40px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+  }
+  
+  .left-arm {
+    left: -20px;
+  }
+  
+  .right-arm {
+    right: -20px;
+    animation: wave 1s ease-in-out infinite; /* Right arm waving animation */
+  }
+  
+  /* Robot legs */
+  .robot-leg {
+    width: 15px;
+    height: 30px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .left-leg {
+    margin-right: 5px;
+    animation: leg-move 1s ease-in-out infinite alternate; /* Left leg move */
+  }
+  
+  .right-leg {
+    margin-left: 5px;
+    animation: leg-move 1s ease-in-out infinite alternate; /* Right leg move */
+  }
+  
+  /* Waving animation */
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Leg move animation */
+  @keyframes leg-move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Eye movement */
+  @keyframes eye-move {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Head bobbing */
+  @keyframes head-bob {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Bouncing robot animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* Full-page contact section */
+.contact-section.full-page {
+    min-height: 100vh; /* Full viewport height */
+    background: linear-gradient(to right, #4e54c8, #8f94fb); /* Gradient background */
+    color: white;
+    padding: 40px;
+  }
+  
+  .contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .contact-section .form-control {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+  
+  .contact-section .btn {
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+  /* Robot container */
+.robot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 100vh; /* Full screen height */
+  }
+  
+  /* Robot styling */
+  .robot {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 2s ease-in-out infinite; /* Bouncing animation for robot */
+  }
+  
+  /* Robot head */
+  .robot-head {
+    background-color: #34495e;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    animation: head-bob 1s ease-in-out infinite; /* Head bobbing animation */
+  }
+  
+  /* Robot eyes */
+  .robot-eyes {
+    position: absolute;
+    top: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+  }
+  
+  .left-eye, .right-eye {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    animation: eye-move 1s infinite alternate;
+  }
+  
+  .left-eye {
+    animation-delay: 0.5s;
+  }
+  
+  /* Robot body */
+  .robot-body {
+    width: 60px;
+    height: 70px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  /* Robot arms */
+  .robot-arm {
+    position: absolute;
+    top: 40px;
+    width: 15px;
+    height: 40px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+  }
+  
+  .left-arm {
+    left: -20px;
+  }
+  
+  .right-arm {
+    right: -20px;
+    animation: wave 1s ease-in-out infinite; /* Right arm waving animation */
+  }
+  
+  /* Robot legs */
+  .robot-leg {
+    width: 15px;
+    height: 30px;
+    background-color: #2c3e50;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .left-leg {
+    margin-right: 5px;
+    animation: leg-move 1s ease-in-out infinite alternate; /* Left leg move */
+  }
+  
+  .right-leg {
+    margin-left: 5px;
+    animation: leg-move 1s ease-in-out infinite alternate; /* Right leg move */
+  }
+  
+  /* Waving animation */
+  @keyframes wave {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(15deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(-15deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  /* Leg move animation */
+  @keyframes leg-move {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Eye movement */
+  @keyframes eye-move {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  /* Head bobbing */
+  @keyframes head-bob {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Bouncing robot animation */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
